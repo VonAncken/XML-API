@@ -1,6 +1,6 @@
 #!/bin/tclsh
 ################################################################################
-# List all devices, channels, datapoints, rooms and functions in one request   #
+# Lists all devices, channels, datapoints, rooms and functions in one request  #
 # and in a minimalistic and compact XML structure in which the tags and        #
 # attributes consist of only 1 to 2 letters.                                   #
 # The channels and attributes are reduced to the minimum required for remote   #
@@ -11,6 +11,23 @@
 #                                                                              #
 # The Script is based on devicelist.cgi, statelist.cgi, roomlist.cgi and       #
 # functionlist.cgi.                                                            #
+#                                                                              #
+#------------------------------------------------------------------------------#
+#                                                                              #
+# Abbreviations of the tags and attributes:                                    #
+#                                                                              #
+#   tags                           attributes                                  #
+#   ----                           ----------                                  #
+#                                                                              #
+#   dl - device list               n - name                                    #
+#   rl - room list                 i - ise id                                  #
+#   fl - function list             t - device type                             #
+#    d - device                    x - index                                   #
+#    c - channel                   v - value                                   #
+#    p - datapoint                 d - direction                               #
+#    r - room                      s - shown (visible)                         #
+#    f - function                                                              #
+#                                                                              #
 ################################################################################
 
 load tclrega.so

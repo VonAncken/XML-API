@@ -22,10 +22,11 @@ http://[CCU_IP]/config/xmlapi/[ScriptName]
 ```
 where [CCU_IP] corresponds to the IP address or name of your CCU device and [ScriptName] being one of the following tool scripts:
 
-| ScriptName                    | Description / Parameters  
+| ScriptName                    | Description / Parameters
 | ----------------------------- |-------------------------
+| `compactCompleteList.cgi`     | Lists all devices, channels, datapoints, rooms and functions in a compact way to reduce data transfer on mobile devices<br>Abbreviations of the tags and attributes:<br>`dl` **d**evice **l**ist<br>`rl` **r**oom **l**ist<br>`fl` **f**unction **l**ist<br>`d` **d**evice<br>`c` **c**hannel<br>`p` data**p**oint<br>`r` **r**oom<br>`f` **f**unction<br>`n` **n**ame<br>`i` ise **i**d<br>`t` device **t**ype<br>`x` inde**x**<br>`v` **v**alue<br>`d` **d**irection<br>`s` **s**hown (visible)<br>
 | `devicelist.cgi`              | Lists all devices with their channels. Contains name, serial number, device types and ids.<br> `show_internal=1` (outputs all internal channels also)
-| `functionlist.cgi`            | Lists all functions with their channels.     
+| `functionlist.cgi`            | Lists all functions with their channels.    
 | `favoritelist.cgi`            | Lists all favorites and users.<br>`show_datapoint` (outputs also attribute `datapoint_id` and `datapoint_type`)
 | `mastervalue.cgi`             | Returns one or more (1234,5678) devices with their names and values of their master values.<br>`device_id=1234` (returns all master values of device)<br>`requested_name=TEMPERATURE_COMFORT,TEMPERATURE_LOWERING` (returns only master values for specified names)
 | `mastervaluechange.cgi`       | Sets one or more (TEMPERATURE_LOWERING,TEMPERATURE_COMFORT) master values of one or more (1234,5678) devices.<br>`device_id=1234` (sets master values of device)<br>`name=TEMPERATURE_LOWERING` (sets specified master value only)<br>`value=17.0,22.5` (sets master values to specified values)
@@ -72,7 +73,7 @@ http://homematic-forum.de/forum/viewtopic.php?f=26&t=10098&p=75959#p75959
 * Kompatibilität zu RaspberryMatic (HM-RASPBERRYMATIC) hergestellt.
 
 1.10
-* Die XML-API kann jetzt als Addon/Zusatzsoftware über das WebUI installiert/deinstalliert werden 
+* Die XML-API kann jetzt als Addon/Zusatzsoftware über das WebUI installiert/deinstalliert werden
 * statechange.cgi - aendern eines oder mehrere Kanaele-Zustaende
 * sysvar.cgi - Anpassung wegen Variablen Name "Timer>>"
 
@@ -91,7 +92,7 @@ http://homematic-forum.de/forum/viewtopic.php?f=26&t=10098&p=75959#p75959
 1.6
 * state.cgi - Abfrage Abfrage von mehreren IDs hinzugefügt (z.Bsp.: state.cgi?device_id=12796,1245789 )
 * neues cgi systemNotification.cgi - Gibt die System Meldungen aus
-* neues cgi systemNotificationClear.cgi -	Löcht die vorhandenen System Meldungen
+* neues cgi systemNotificationClear.cgi -       Löcht die vorhandenen System Meldungen
 
 1.5
 * Bugfix
