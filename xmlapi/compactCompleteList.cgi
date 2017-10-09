@@ -101,7 +101,8 @@ array set res [rega_script {
                    (sDp != "CONFIG_PENDING") &&
                    (sDp != "DEVICE_IN_BOOTLOADER") &&
                    (sDp != "UPDATE_PENDING") &&
-                   (sDp != "DUTY_CYCLE") ) {
+                   (sDp != "DUTY_CYCLE") &&
+                   (sDp != "DUTYCYCLE") ) {
                 Write("<p");
                 Write(" t='"); WriteXML(sDp);
                 Write("' i='" # sDPId );
