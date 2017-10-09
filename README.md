@@ -24,7 +24,7 @@ where [CCU_IP] corresponds to the IP address or name of your CCU device and [Scr
 
 | ScriptName                    | Description / Parameters
 | ----------------------------- |-------------------------
-| `compactCompleteList.cgi`     | Lists all devices, channels, datapoints, rooms and functions in a compact way to reduce data transfer on mobile devices<br>Abbreviations of the tags and attributes:<br>`dl` **d**evice **l**ist<br>`rl` **r**oom **l**ist<br>`fl` **f**unction **l**ist<br>`d` **d**evice<br>`c` **c**hannel<br>`p` data**p**oint<br>`r` **r**oom<br>`f` **f**unction<br>`n` **n**ame<br>`i` ise **i**d<br>`t` device **t**ype<br>`x` inde**x**<br>`v` **v**alue<br>`d` **d**irection<br>`s` **s**hown (visible)<br>
+| `compactCompleteList.cgi`     | Lists all devices, channels, datapoints, rooms and functions in a compact way to reduce data transfer on mobile devices<br>Abbreviations of the tags and attributes:<br>`dl` **d**evice **l**ist<br>`rl` **r**oom **l**ist<br>`fl` **f**unction **l**ist<br>`d` **d**evice<br>`c` **c**hannel<br>`p` data**p**oint<br>`r` **r**oom<br>`f` **f**unction<br>`n` **n**ame<br>`i` ise **i**d<br>`t` datapoint **t**ype<br>`x` inde**x**<br>`v` **v**alue<br>`s` **s**hown (visible)<br>
 | `devicelist.cgi`              | Lists all devices with their channels. Contains name, serial number, device types and ids.<br> `show_internal=1` (outputs all internal channels also)
 | `functionlist.cgi`            | Lists all functions with their channels.    
 | `favoritelist.cgi`            | Lists all favorites and users.<br>`show_datapoint` (outputs also attribute `datapoint_id` and `datapoint_type`)

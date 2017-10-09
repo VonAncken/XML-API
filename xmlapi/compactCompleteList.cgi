@@ -21,11 +21,11 @@
 #                                                                              #
 #   dl - device list               n - name                                    #
 #   rl - room list                 i - ise id                                  #
-#   fl - function list             t - device type                             #
+#   fl - function list             t - datapoint type                          #
 #    d - device                    x - index                                   #
 #    c - channel                   v - value                                   #
-#    p - datapoint                 d - direction                               #
-#    r - room                      s - shown (visible)                         #
+#    p - datapoint                 s - shown (visible)                         #
+#    r - room                                                                  #
 #    f - function                                                              #
 #                                                                              #
 ################################################################################
@@ -62,12 +62,7 @@ array set res [rega_script {
         foreach(sChnId, oDevice.Channels()) {
 
           object oChannel = dom.GetObject(sChnId);
-          integer iChnDir = oChannel.ChnDirection();
-          string  sChnDir = "U";
           string  sChnShow = "";
-
-          if (1 == iChnDir) { sChnDir = "S"; }
-          if (2 == iChnDir) { sChnDir = "R"; }
 
           if (false == oChannel.Internal()) {
             if (oChannel.Visible()) {
@@ -79,7 +74,6 @@ array set res [rega_script {
 
           Write("<c n='"); WriteXML( oChannel.Name() ); Write("'");
           Write(" i='" # sChnId # "'");
-          Write(" d='" # sChnDir # "'");
           Write(" x='" # oChannel.ChnNumber() # "'");
           Write(" s='" # sChnShow # "'");
 
